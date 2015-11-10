@@ -1,0 +1,308 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!-- saved from url=(0050)file:///C:/Users/Eurequat-Algerie/Desktop/SMS.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    	
+    	<meta http-equiv="X-UA-Compatible" content="IE=9">
+    	
+    	<meta http-equiv="X-Frame-Options" content="DENY">
+
+		<link type="image/x-icon" rel="shortcut icon" href="https://my.ooredoo.dz/images/favicon.ico">
+    	<link type="text/css" href="./SMS2_files/jquery-ui-1.10.0.custom.css" rel="stylesheet">
+		<link type="text/css" href="./SMS2_files/timepicker.css" rel="stylesheet">
+	    <link type="text/css" href="./SMS2_files/main.css" rel="stylesheet">
+    	
+    	<script async="" src="file://www.google-analytics.com/analytics.js"></script><script async="" src="./SMS2_files/analytics(1).js"></script><script type="text/javascript" src="./SMS2_files/jquery.min.js"></script>
+	    <script type="text/javascript" src="./SMS2_files/jquery.validate.js"></script>
+	    <script type="text/javascript" src="./SMS2_files/jquery.number.js"></script>
+	    
+
+	    <script type="text/javascript" src="./SMS2_files/jquery-ui-1.10.0.custom.min.js"></script> 
+		<script type="text/javascript" src="./SMS2_files/jquery.ui.datepicker-fr.min.js"></script>
+		<script type="text/javascript" src="./SMS2_files/jquery-ui-timepicker.js"></script>
+	   
+	    <script type="text/javascript" src="./SMS2_files/rdv.js"></script> 
+	    
+	    <script type="text/javascript" src="./SMS2_files/scripts.js"></script> 
+	   
+    	<!-- --------------------------Begin google Analytics---------------------------------- -->
+    	
+    	<script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+		
+		  ga('create', 'UA-46210547-1', 'ooredoo.dz');
+		  ga('send', 'pageview');
+
+		</script>   	
+		
+		<!-- -------------------------End google Analytics---------------------------------- -->
+		
+
+    </head>
+    
+    <body style="zoom: 1;">
+    	<div id="wrapper">
+    		<div id="header">
+
+
+<div id="logoBar">
+	<a href="http://www.ooredoo.dz/"><img src="./SMS2_files/logo_ooredoo.png"></a>
+</div>
+<div id="socialBar">
+	<iframe scrolling="no" frameborder="0" src="./SMS2_files/like.html" style="border:none; overflow:hidden; width:98px; height:25px" allowtransparency="true"></iframe>
+	<a href="https://www.facebook.com/OoredooDZ" style="text-decoration: none;" target="_blank">	
+		<img src="./SMS2_files/logo_facebook.png">
+	</a>
+	<a href="https://www.youtube.com/OoredooDZ" target="_blank">
+		<img src="./SMS2_files/logo_youtube.png">
+	</a>
+</div>
+</div>
+    		
+
+
+
+
+
+
+
+
+	<div id="userInfo">
+		<span class="text-white"> Mon Espace | </span><span class="text-red">cherifi&nbsp;walid</span><span class="text-white"> | </span><a href="https://my.ooredoo.dz/j_spring_security_logout" class="text-white">Se déconnecter</a><span class="text-white"> </span><img src="./SMS2_files/mon_espace.png">
+	</div>
+
+    		<div id="content">
+    			
+
+
+
+
+
+
+
+
+
+
+	<div id="welcomeBar">
+		<div id="welcomeBarLeft">
+			<span>Bienvenue </span><span class="text-red">cherifi&nbsp; walid</span>
+		</div>
+		<div id="welcomeBarRight">
+			<span>Votre numéro est: </span><span>0550489085</span>
+		</div>
+	</div>
+<div class="double-spacer"></div>
+   		
+    			<div id="menu">
+
+
+
+
+
+	</div>
+    			
+
+
+
+
+
+
+
+<title>SMS</title>
+
+	<div class="spacer"></div>
+	
+	<div class="spacer"></div>
+
+	
+
+
+
+
+
+
+
+<title>Mes services</title>
+
+	
+
+
+
+
+
+<div id="content-data">
+	<div>
+		<div class="spacer"></div>
+			<span style="margin-left: 20px; font-weight: bold;">Service web sms / Envoie un SMS online maintenant!</span>
+		<div class="spacer" style="margin-top: 20px;"></div>
+	</div>
+	 <br> 
+	 
+	<div class="notification">
+		
+		
+		
+		
+	</div>
+
+	<form id="smsModelForm" name="smsModelForm" action="file:///C:/Users/Eurequat-Algerie/Desktop/SMS_files/SMS.html" method="post" novalidate="novalidate">
+	<div id="sms-content">	
+		<div id="content-left">
+			<label class="smsCustomerLabel">N° du destinataire : </label>
+			<input id="smsTo" name="smsTo" class="smsCustomerInput required msisdn" type="text" value="">
+			<label class="smsCustomerLabel">Message (125 Caractères maximum) </label>
+			<textarea id="content" name="content" maxlength="125" onkeyup="textCounter(document.smsModelForm.content,document.getElementById(&#39;remLen&#39;),125)" class="smsCustomerTextarea required" onkeydown="textCounter(document.smsModelForm.content,document.getElementById(&#39;remLen&#39;),125)" rows="6" cols="30"></textarea>
+			<br>
+			<br> 
+			<label class="smsCustomerLabel">Nombre de caractères </label>	
+			<input readonly="" type="text" class="smsCustomerInput required" id="remLen" size="3" maxlength="3" value="125">
+		</div>
+		
+		<div id="content-right">
+				
+					<div id="divCaptcha">
+						<br>
+						<div id="smsImgCaptcha">
+							<label class="smsCustomerLabel">Code :</label>
+							<img src="./SMS2_files/captcha">
+						</div>
+						
+						<label class="smsCustomerLabel">Tapez le code : </label>
+						<input type="text" name="j_captcha_response" class="smsCustomerInput required" autocomplete="off">
+					</div>
+				
+					<br>
+					<br>
+					<button id="smsSendButton" type="submit" value="submit">Envoyer</button>
+		</div>
+	</div>
+	</form>
+	
+
+</div>
+
+<script type="text/javascript">
+$(document).ready(function() {
+	$("#smsModelForm").validate();
+});
+
+</script>
+    		</div>
+    		
+    	</div>		
+    
+
+<div class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-front ui-dialog-buttons" tabindex="-1" role="dialog" aria-describedby="dialog-condition" aria-labelledby="ui-id-1" style="display: none;"><div class="ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix"><span id="ui-id-1" class="ui-dialog-title">&nbsp;</span><button class="ui-button ui-widget ui-corner-all ui-button-icon-only ui-dialog-titlebar-close" role="button" aria-disabled="false" title="close"><span class="ui-button-icon-primary ui-icon ui-icon-closethick"></span><span class="ui-button-text">close</span></button></div><div class="ui-dialog-buttonpane ui-widget-content ui-helper-clearfix"><div class="ui-dialog-buttonset"><button type="button" class="ui-button ui-widget ui-corner-all ui-button-text-only acheterButton" role="button" aria-disabled="false"><span class="ui-button-text">Ok</span></button></div></div></div><div class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-front ui-dialog-buttons" tabindex="-1" role="dialog" aria-describedby="dialog-condition" aria-labelledby="ui-id-1" style="display: none;"><div class="ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix"><span id="ui-id-1" class="ui-dialog-title">&nbsp;</span><button class="ui-button ui-widget ui-corner-all ui-button-icon-only ui-dialog-titlebar-close" role="button" aria-disabled="false" title="close"><span class="ui-button-icon-primary ui-icon ui-icon-closethick"></span><span class="ui-button-text">close</span></button></div><div id="dialog-condition" style="" class="ui-dialog-content ui-widget-content">
+
+<span style=" font-weight: bold; font-size: 30px;">Votre Espace Client</span><span style="float: right; font-weight: bold; font-size: 30px;">Ooredoo</span>
+<br>
+<br>
+<span style=" font-weight: bold; font-size: 30px;">Conditions générales d’Utilisation</span>
+<br>
+<br>
+<p>Le présent document définit les conditions générales d’accès et d’utilisation des services et contenus de l’Espace Client de Ooredoo.</p> 
+<br>
+<p>En  utilisant le  site Internet et en s’inscrivant sur l’espace Client, l’Utilisateur accepte de conclure un contrat qui l’engage auprès de Ooredoo.</p>  
+<br>
+<p>Si l’Utilisateur utilise l’espace Client  pour le compte d'une entreprise ou d'une autre entité juridique, il reste  personnellement lié par le présent Contrat même si l’entreprise a conclu un accord distinct avec Ooredoo.</p>
+<br>
+<p>L’accès et l’utilisation de l’Espace Client est subordonné à l’acceptation des présentes conditions générales d’utilisation par chaque Utilisateur lors de sa première connexion.</p>
+<br>
+<h2>Article 1 : Définitions</h2>
+<br>
+<p>Pour l’application des présentes conditions générales d’utilisation, on entend par : </p>
+<ul style="margin-left: 15px;">
+	<li><span style=" font-weight: bold;">« Utilisateur » : </span> Désigne toute personne qui utilise les conditions générales d’accès et d’utilisation des services et contenus de l’Espace Client de Ooredoo.</li>
+	<li><span style=" font-weight: bold;">« Contenu » : </span> Désigne l’ensemble des contenus édités au profit de  l’Utilisateur dans le cadre de l’utilisation du Service </li>
+	<li><span style=" font-weight: bold;">« Service » : </span> Désigne les differents services affichés à l’utilisateur sur son espace personnel</li>
+	<li><span style=" font-weight: bold;">« Site » : </span> Désigne le site internet, édité sous la responsabilité de Wataniya Télecom Algérie,  portails accessible sous l’URL http://www.ooredoo.dz.</li>
+	<li><span style=" font-weight: bold;">« Espace Client » : </span> désigne l’espace personnel lié à la ligne/ compte  du client utilisateur.</li>
+</ul>
+<br>
+<h2>Article 2 : Objet du site</h2>
+<br>
+<p>L’objet de l'Espace Client est de mettre à la disposition des Clients Ooredoo un espace personnel leur permettant d’accéder à plusieurs services. L’accès à cet Espace Client est gratuit, toutefois la souscription aux services présentés sur cet espace peut être payant, selon les tarifs des services en vigueur, cet espace permettra aux Client notamment  de souscrire ou gérer  en ligne, des services proposés par Ooredoo.</p>
+<br>
+<h2>Article 3 : Conditions d’utilisation</h2>
+<br>
+<p>L'Espace Client est gratuit (hors coût de connexion à Internet et coûts de communication téléphonique pour toute demande d'information complémentaire liée à l'Espace Client ou au service proposé) et ouvert 24h/24h et 7 jours/7 jours, sauf en cas de force majeure, de pannes informatiques ou de problèmes liés aux réseaux de télécommunications.</p> 
+<br>
+<h3>3.1 Conditions d’accès</h3>
+<p>L’utilisation de l’Espace Client suppose que l’Utilisateur dispose de tous matériels et logiciels nécessaires à la navigation sur internet.</p> 
+<p>L'accès et l'utilisation de l'Espace Client supposent par ailleurs que  l’Utilisateur de l’Espace Client dispose d'une adresse de messagerie électronique (e-mail) valide et strictement individuelle, Et qu’il soit propriétaire de la ligne liée à cet espace pour les clients particuliers.</p>
+<br>
+<h3>3.2 Conditions d’ouverture</h3> 
+<p>Le droit d’ouverture de l’Espace Client est réservé aux seuls clients Ooredoo quel que soit leur offre et ayant une ligne identifiée pour les clients particuliers.</p> 
+<br>
+<h2>Article 4 : Modalités d'ouverture et de fonctionnement de l'Espace Client</h2>
+<br>
+<h3>4.1 Ouverture de l’Espace Client</h3>
+<h4>La demande d’ouverture de l'Espace Client par l’Utilisateur</h4> 
+<p>L’Utilisateur peut effectuer sa demande d’accès à son Espace Client directement en ligne sur la page de connexion www.Ooredoo.dz</p>
+<p>Lors de la demande d’ouverture de l’Espace Client en ligne, l’Utilisateur  remplit un formulaire de « Demande d’ouverture d’Espace Client » sur lequel il renseigne ses coordonnées, (noms, prénoms, numéro de téléphone, adresse Email, et question secrète)</p>  
+<p>La réception de la demande d’ouverture d’espace client dument remplie par l’Utilisateur conditionne l’ouverture de l’Espace Client par Ooredoo.</p> 
+<p>Une fois l’inscription effectuée, Ooredoo  notifie à l’Utilisateur par SMS un mot de passe unique lui servant de code d’accès à son espace personnel.</p>
+<p>A réception de ses codes d’accès, l’Utilisateur peut se connecter à l’Espace Client.</p> 
+<br>
+<h2>Article 5. Responsabilité des codes d’accès</h2>
+<br>
+<p>La conservation des identifiants et mot de passe est placée sous l’entière responsabilité de L’Utilisateurs qui devra prendre toutes les mesures nécessaires pour que ceux-ci ne soient pas connus ou utilisés par des tiers, et ce sous quelque forme et à quelque titre que ce soit.</p> 
+<p>L’Utilisateur reconnaît, en acceptant les conditions générales d’utilisation de l'Espace Client, que l’Utilisateur est seul et unique responsable à l’égard d’Ooredoo de tous actes effectués à partir de son compte.</p> 
+<br>
+<h2>Article 6. Gestion des codes d’accès</h2>
+<br>
+<h3>6.1  En cas de perte ou d'oubli du mot de passe donnant accès à l'Espace Client</h3>
+<p>À tout moment, l'Utilisateur peut effectuer une demande d'attribution d'un nouveau code d'accès, via le lien « mot de passe oublié » proposé sous les champs de saisie de l'identifiant, en page d'accueil de l'Espace Client. L’attribution d’un nouveau mot de passe emporte annulation du mot de passe précédent.</p> 
+<br>
+<h3>6.2  Modification du mot de passe à l’initiative de l’Utilisateur </h3>
+<p>À tout moment l'Utilisateur connecté à l'Espace Client peut modifier son mot de passe en se rendant dans la rubrique «Modifier mot de passe».</p> 
+<br>
+<h2>Article 7. Résiliation</h2> 
+<br>
+<h3>Désactivation, résiliation de compte utilisateur à l'initiative de Ooredoo</h3>
+<p>Ooredoo se réserve le droit de désactiver ou de supprimer un compte Utilisateur sans délai ni formalité, dans les cas suivants :</p> 
+
+<ul style="margin-left: 15px;">
+	<li>utilisation non-conforme aux présentes conditions générales,</li>
+	<li>tentative de connexion non autorisée, par utilisation frauduleuse du système ou par usurpation de codes d'accès signalée par l'utilisateur ou annulation ou rupture du contrat de ligne liant le client à Ooredoo</li>
+</ul>
+<br>
+<h2>Article 8. Évolution de l’Espace Client et des services</h2>
+<br>
+<p>L’Espace Client, les services proposés et contenus par Ooredoo  sont susceptibles d'être complétés, supprimés, modifiés ou remplacés à tout moment.</p> 
+<p>La modification des services et des contenus ne fera pas systématiquement l'objet d'une information particulière, l'Utilisateur étant en mesure, à chaque connexion, de constater par lui-même le détail des services proposés.</p> 
+<p>En cas de problème technique, ou pendant les opérations de maintenance, Ooredoo  peut être amenée à fermer tout ou partie des services de l'Espace Client. Un message en informera l'Utilisateur qui tente de se connecter.</p> 
+<p>Ooredoo  s'engage à mettre en œuvre les actions nécessaires au rétablissement du service dans les meilleurs délais, mais ne pourra être tenue pour responsable de cette interruption ainsi que la non réception des informations par l'Utilisateur, quelle qu'en soit la cause.</p> 
+<br>
+<h2>Article 9. Sincérité des informations</h2> 
+<br>
+<p>Le bon fonctionnement de l'Espace Client, des services et contenus proposés nécessite de déclarer des données personnelles exactes, à jour et correctes, c’est pourquoi le Client s’engage à tenir Ooredoo  informée de tout changement de statut, de structure ou d’organisation susceptible d’impacter la fiabilité des données utiles au bon fonctionnement de l’Espace Client.</p> 
+<br>
+<h2>Article 10. Responsabilité de Ooredoo</h2> 
+<br>
+<p>Ooredoo ne peut être tenue responsable en cas de non-respect des procédures d'utilisation des services notamment en cas d'informations inexactes communiquées par l'Utilisateur lors de son inscription ainsi que des dommages quelconques, directs ou indirects, matériels ou immatériels résultant notamment de la consultation et/ou de l'utilisation de ce site internet (ou d'autres sites qui lui sont liés).</p> 
+<p>Ooredoo  ne saurait davantage être tenue pour responsable des conséquences d'une intrusion par usurpation d'identité, en l’absence de faute engageant la responsabilité civile d’Ooredoo dument établie.</p> 
+<br>
+<h2>Article 11. Propriété intellectuelle</h2>
+<br>
+<p>L’Espace Client Ooredoo, et son contenu sont la propriété d’Ooredoo et sont protégés au titre des droits de propriété intellectuelle et industrielle.</p> 
+<br>
+<h2>Article 12 Durée de la convention</h2>
+<br>
+<p>La présente convention est conclue pour une durée indéterminée. L’Utilisateur  peut cesser à tout moment d'utiliser l'Espace Client et les services en ligne, sans préavis.</p> 
+<br>
+<h2>Article 13. Droit applicable</h2>
+<br>
+<p>L'Espace Client est régi par le droit algérien et relève de la compétence des tribunaux algériens.</p> 
+<br>
+<h2>Article 14. Mentions légales</h2>
+<br>
+<p>Ces conditions générales d'utilisation complètent les mentions légales accessibles sur le site www.ooredoo.dz</p>
+<br>
+<h2>Article 15. Modification des conditions générales d'utilisation</h2>
+<br>
+<p>Ooredoo se réserve le droit de modifier les présentes conditions générales d’utilisation à tout moment et sans avis préalable. C'est pourquoi il invite les utilisateurs à les consulter régulièrement.</p> 
+	
+</div><div class="ui-dialog-buttonpane ui-widget-content ui-helper-clearfix"><div class="ui-dialog-buttonset"><button type="button" class="ui-button ui-widget ui-corner-all ui-button-text-only acheterButton" role="button" aria-disabled="false"><span class="ui-button-text">Ok</span></button></div></div></div></body></html>
