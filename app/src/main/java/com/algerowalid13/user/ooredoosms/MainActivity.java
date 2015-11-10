@@ -110,7 +110,7 @@ public class MainActivity extends Activity  {
 
 public void send(View r){
 
-    String javascriptTO = "javascript: document.getElementsByClasseName('smsCustomerInput')[0].focus();";
+    String javascriptTO = "javascript: document.getElementsByName('j_captcha_response')[0].focus();";
     mWebView.loadUrl(javascriptTO);
 
 
