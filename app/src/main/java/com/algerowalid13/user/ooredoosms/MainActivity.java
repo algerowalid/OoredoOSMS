@@ -1,5 +1,137 @@
 package com.algerowalid13.user.ooredoosms;
 
+
+
+
+
+        import android.os.Bundle;
+        import android.util.Log;
+        import android.view.View;
+        import android.view.View.OnClickListener;
+        import android.webkit.WebChromeClient;
+        import android.webkit.WebView;
+        import android.webkit.WebViewClient;
+        import android.widget.EditText;
+        import android.annotation.SuppressLint;
+        import android.app.Activity;
+        import android.widget.Toast;
+
+public class MainActivity extends Activity  {
+
+    private static final String URL = "http://my.ooredoo.dz";
+  //  private static final String URL = "file:///android_asset/index1.html";
+    private WebView mWebView;
+    String btn;
+    @SuppressLint("SetJavaScriptEnabled")
+    @Override
+
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        mWebView = (WebView) findViewById(R.id.webview);
+
+
+        mWebView.getSettings().setJavaScriptEnabled(true);
+
+        mWebView.setWebChromeClient(new WebChromeClient());
+
+       mWebView.setWebViewClient(new WebViewClient() {
+            @Override
+            public void onPageFinished(WebView view, String url) {
+                String user = ((EditText) findViewById(R.id.edit_text)).getText().toString();
+                if (user.isEmpty()) {
+                    user = "World";
+                }
+
+                String javascript = "javascript: document.getElementsByName('j_username')[0].value='0550489085'; javascript: document.getElementsByName('j_password')[0].value='cavock725';";
+
+                //String javascript2="javascript: document.getElementsByName('j_password')[0].value='cavock725';";
+
+                //String javascriptTO="document.getElementById('logoBar').focus();";
+
+
+                  view.loadUrl(javascript);
+
+            }
+        });
+
+        refreshWebView();
+
+    }
+
+    private void refreshWebView() {
+       mWebView.loadUrl(URL);
+    }
+
+    public void connect(View v) {
+
+        String btn = "javascript: document.getElementsByClassName('submit-button')[0].click(); ";
+        mWebView.loadUrl(btn);
+
+        // check if connection is Good
+        mWebView.setWebViewClient(new WebViewClient() {
+            @Override
+            public void onPageFinished(WebView view, String url) {
+
+                String jh = mWebView.getUrl();
+
+                if (jh.toLowerCase().contains("accueil")) {
+
+                    mWebView.loadUrl("http://my.ooredoo.dz/send-sms");
+                    refreshWebView();
+
+                    mWebView.setWebViewClient(new WebViewClient() {
+                        @Override
+                        public void onPageFinished(WebView view, String url) {
+
+                            //  String javascriptTO = "javascript: document.getElementById('smsTo').value='0550489085'; javascript: $(document).ready(function() {$('#smsModelForm').validate();$('textarea#content').val('eeee');});";
+                            // String javascriptMSG = "javascript: $(document).ready(function() {$('#smsModelForm').validate();$('textarea#content').val('eeee');});";
+                            //  String javascriptCAPTCH="javascript: document.getElementsByName('j_captcha_response')[0].value='0550489085';";
+
+                            String javascriptTO = "document.getElementByClass('smsImgCaptcha').focus();";
+
+                            mWebView.loadUrl(javascriptTO);
+
+
+                        }
+                    });
+
+                    refreshWebView();
+
+
+                } else {
+                    Toast.makeText(getApplicationContext(), "Erreur Identifiant ", Toast.LENGTH_LONG).show();
+                }
+
+
+            }
+        });
+
+
+
+    }
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -91,3 +223,4 @@ public class MainActivity extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 }
+*/
