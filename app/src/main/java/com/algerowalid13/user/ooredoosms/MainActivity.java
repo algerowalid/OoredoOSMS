@@ -18,7 +18,7 @@ package com.algerowalid13.user.ooredoosms;
 
 public class MainActivity extends Activity  {
 
-    private static final String URL = "http://my.ooredoo.dz";
+    private static final String URL = "http://my.ooredoo.dz/send-sms";
   //  private static final String URL = "file:///android_asset/index1.html";
     private WebView mWebView;
     String btn;
@@ -34,7 +34,7 @@ public class MainActivity extends Activity  {
 
         mWebView.getSettings().setJavaScriptEnabled(true);
 
-        mWebView.setWebChromeClient(new WebChromeClient());
+       mWebView.setWebChromeClient(new WebChromeClient());
 
        mWebView.setWebViewClient(new WebViewClient() {
             @Override
@@ -43,7 +43,7 @@ public class MainActivity extends Activity  {
                 if (user.isEmpty()) {
                     user = "World";
                 }
-
+/*
                 String javascript = "javascript: document.getElementsByName('j_username')[0].value='0550489085'; javascript: document.getElementsByName('j_password')[0].value='cavock725';";
 
                 //String javascript2="javascript: document.getElementsByName('j_password')[0].value='cavock725';";
@@ -52,7 +52,7 @@ public class MainActivity extends Activity  {
 
 
                   view.loadUrl(javascript);
-
+*/
             }
         });
 
@@ -69,6 +69,8 @@ public class MainActivity extends Activity  {
         String btn = "javascript: document.getElementsByClassName('submit-button')[0].click(); ";
         mWebView.loadUrl(btn);
 
+
+
         // check if connection is Good
         mWebView.setWebViewClient(new WebViewClient() {
             @Override
@@ -79,7 +81,6 @@ public class MainActivity extends Activity  {
                 if (jh.toLowerCase().contains("accueil")) {
 
                     mWebView.loadUrl("http://my.ooredoo.dz/send-sms");
-                    refreshWebView();
 
                     mWebView.setWebViewClient(new WebViewClient() {
                         @Override
@@ -88,16 +89,11 @@ public class MainActivity extends Activity  {
                             //  String javascriptTO = "javascript: document.getElementById('smsTo').value='0550489085'; javascript: $(document).ready(function() {$('#smsModelForm').validate();$('textarea#content').val('eeee');});";
                             // String javascriptMSG = "javascript: $(document).ready(function() {$('#smsModelForm').validate();$('textarea#content').val('eeee');});";
                             //  String javascriptCAPTCH="javascript: document.getElementsByName('j_captcha_response')[0].value='0550489085';";
-
-                            String javascriptTO = "document.getElementByClass('smsImgCaptcha').focus();";
-
+                            String javascriptTO = "document.getElementById('smsSendButton').focus();";
                             mWebView.loadUrl(javascriptTO);
-
 
                         }
                     });
-
-                    refreshWebView();
 
 
                 } else {
@@ -112,7 +108,13 @@ public class MainActivity extends Activity  {
 
     }
 
+public void send(View r){
 
+    String javascriptTO = "javascript: document.getElementsByClasseName('smsCustomerInput')[0].focus();";
+    mWebView.loadUrl(javascriptTO);
+
+
+}
 
 
 
